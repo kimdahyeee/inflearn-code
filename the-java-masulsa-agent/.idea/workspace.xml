@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="239682f1-955f-4718-be8d-ed9090b62832" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/inflearn/thejava/MasulsaAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/the-java-masulsa-agent.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1Y7PwzT8JBqFwjVFsNZ35hcYaFk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="the-java-masulsa-agent [clean,package]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="239682f1-955f-4718-be8d-ed9090b62832" name="Default Changelist" comment="" />
+      <created>1582290901405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582290901405</updated>
+      <workItem from="1582290907204" duration="1297000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="168" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582291984571">
+      <screen x="0" y="0" width="1422" height="760" />
+    </state>
+    <state x="168" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1422.760@0.0.1422.760" timestamp="1582291984571" />
+    <state x="518" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1582291815721">
+      <screen x="0" y="0" width="1422" height="760" />
+    </state>
+    <state x="518" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1422.760@0.0.1422.760" timestamp="1582291815721" />
+    <state width="1380" height="237" key="GridCell.Tab.0.bottom" timestamp="1582292237937">
+      <screen x="0" y="0" width="1422" height="760" />
+    </state>
+    <state width="1380" height="237" key="GridCell.Tab.0.bottom/0.0.1422.760@0.0.1422.760" timestamp="1582292237937" />
+    <state width="1380" height="237" key="GridCell.Tab.0.center" timestamp="1582292237936">
+      <screen x="0" y="0" width="1422" height="760" />
+    </state>
+    <state width="1380" height="237" key="GridCell.Tab.0.center/0.0.1422.760@0.0.1422.760" timestamp="1582292237936" />
+    <state width="1380" height="237" key="GridCell.Tab.0.left" timestamp="1582292237936">
+      <screen x="0" y="0" width="1422" height="760" />
+    </state>
+    <state width="1380" height="237" key="GridCell.Tab.0.left/0.0.1422.760@0.0.1422.760" timestamp="1582292237936" />
+    <state width="1380" height="237" key="GridCell.Tab.0.right" timestamp="1582292237937">
+      <screen x="0" y="0" width="1422" height="760" />
+    </state>
+    <state width="1380" height="237" key="GridCell.Tab.0.right/0.0.1422.760@0.0.1422.760" timestamp="1582292237937" />
+    <state x="374" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1582292070739">
+      <screen x="0" y="0" width="1422" height="760" />
+    </state>
+    <state x="374" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1422.760@0.0.1422.760" timestamp="1582292070739" />
+  </component>
+</project>

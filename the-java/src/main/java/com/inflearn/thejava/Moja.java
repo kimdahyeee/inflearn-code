@@ -1,4 +1,4 @@
-package com.inflearn.the.java;
+package com.inflearn.thejava;
 
 public class Moja {
     public String pullOut() {

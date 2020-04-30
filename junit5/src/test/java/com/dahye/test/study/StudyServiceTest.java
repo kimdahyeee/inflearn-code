@@ -15,6 +15,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
+/**
+ * @reference https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html
+ */
 @ExtendWith(MockitoExtension.class)
 class StudyServiceTest {
 
@@ -134,5 +137,10 @@ class StudyServiceTest {
 
         assertNotNull(study);
         assertEquals(1L, study.getOwnerId());
+
+        verify(memberService, times(1)).notify(study);
+        verify(memberService, never()).validate(any());
+
+        verifyNoMoreInteractions(memberService);
     }
 }

@@ -2,7 +2,6 @@ package com.dahye.test.docker;
 
 import com.dahye.test.domain.Member;
 import com.dahye.test.domain.Study;
-import com.dahye.test.domain.StudyStatus;
 import com.dahye.test.member.MemberService;
 import com.dahye.test.study.StudyRepository;
 import com.dahye.test.study.StudyService;
@@ -14,19 +13,16 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.context.ApplicationContextInitializer;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Profile;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.ContextConfiguration;
-import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.containers.DockerComposeContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
+import java.io.File;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.times;
@@ -46,8 +42,9 @@ public class DockerTest {
     StudyRepository studyRepository;
 
     @Container
-    static PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer()
-            .withDatabaseName("studytest");
+    static DockerComposeContainer composeContainer
+            = new DockerComposeContainer(new File("C:/project/inflearn-code/junit5/src/test/resources/docker-compose.yml"))
+            .withLocalCompose(true);
 
     @BeforeEach
     void beforeEach() {

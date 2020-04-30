@@ -1,4 +1,4 @@
-package com.dahye.test.docker;
+package com.dahye.test.learningtest.docker;
 
 import com.dahye.test.domain.Member;
 import com.dahye.test.domain.Study;

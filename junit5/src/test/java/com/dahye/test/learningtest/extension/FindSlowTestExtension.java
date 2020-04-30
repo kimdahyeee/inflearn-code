@@ -1,6 +1,6 @@
-package com.dahye.test.extension;
+package com.dahye.test.learningtest.extension;
 
-import com.dahye.test.metaAnnotation.SlowTest;
+import com.dahye.test.learningtest.metaAnnotation.SlowTest;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;

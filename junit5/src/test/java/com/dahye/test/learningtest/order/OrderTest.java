@@ -1,4 +1,4 @@
-package com.dahye.test.order;
+package com.dahye.test.learningtest.order;
 
 import org.junit.jupiter.api.*;
 

@@ -1,9 +1,11 @@
-package com.dahye.test.study;
+package com.dahye.test.learningtest.bdd;
 
 import com.dahye.test.domain.Member;
 import com.dahye.test.domain.Study;
 import com.dahye.test.domain.StudyStatus;
 import com.dahye.test.member.MemberService;
+import com.dahye.test.study.StudyRepository;
+import com.dahye.test.study.StudyService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

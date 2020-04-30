@@ -1,4 +1,4 @@
-package com.dahye.test.repeat;
+package com.dahye.test.learningtest.repeat;
 
 import com.dahye.test.domain.Study;
 import org.junit.jupiter.api.DisplayName;

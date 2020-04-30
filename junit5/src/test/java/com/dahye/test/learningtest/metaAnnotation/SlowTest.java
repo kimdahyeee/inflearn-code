@@ -1,4 +1,4 @@
-package com.dahye.test.metaAnnotation;
+package com.dahye.test.learningtest.metaAnnotation;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

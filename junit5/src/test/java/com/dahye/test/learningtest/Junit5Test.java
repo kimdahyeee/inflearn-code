@@ -1,4 +1,4 @@
-package com.dahye.test;
+package com.dahye.test.learningtest;
 
 import org.junit.jupiter.api.*;
 

@@ -1,5 +1,7 @@
 package com.dahye.test;
 
+import com.dahye.test.domain.Study;
+import com.dahye.test.domain.StudyStatus;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

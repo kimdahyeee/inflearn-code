@@ -1,6 +1,6 @@
 package com.dahye.test.repeat;
 
-import com.dahye.test.Study;
+import com.dahye.test.domain.Study;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.RepetitionInfo;
@@ -61,7 +61,7 @@ public class RepeatTest {
     @ParameterizedTest(name = "{index} {displayName} message = {0}")
     @ValueSource(ints = {10, 20, 30})
     void converterTest(@ConvertWith(StudyConverter.class) Study study) {
-        System.out.println(study.getLimit());
+        System.out.println(study.getLimitCount());
     }
 
     private static class StudyConverter extends SimpleArgumentConverter {

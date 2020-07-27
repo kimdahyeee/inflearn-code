@@ -1,12 +1,11 @@
 package dev.inflearn.restapi.events;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -27,12 +26,10 @@ public class EventControllerTests {
     @Autowired
     ObjectMapper objectMapper;
 
-    @MockBean
-    EventRepository eventRepository;
-
     @Test
     void createEvent() throws Exception {
         Event event = Event.builder()
+                .id(100)
                 .name("Spring")
                 .description("rest api")
                 .beginEnrollmentDateTime(LocalDateTime.of(2020, 7, 27, 23, 10, 0))
@@ -43,9 +40,10 @@ public class EventControllerTests {
                 .maxPrice(200)
                 .limitOfEnrollment(100)
                 .location("gangnam")
+                .free(true)
+                .offline(false)
+                .eventStatus(EventStatus.PUBLISHED)
                 .build();
-        event.setId(10);
-        Mockito.when(eventRepository.save(event)).thenReturn(event);
 
         mockMvc.perform(post("/api/events/")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -56,6 +54,9 @@ public class EventControllerTests {
                 .andExpect(jsonPath("id").exists())
                 .andExpect(header().exists(HttpHeaders.LOCATION))
                 .andExpect(header().string(HttpHeaders.CONTENT_TYPE, "application/hal+json"))
+                .andExpect(jsonPath("id").value(Matchers.not(100)))
+                .andExpect(jsonPath("free").value(Matchers.not(true)))
+                .andExpect(jsonPath("eventStatus").value(Matchers.not(EventStatus.DRAFT)))
         ;
     }
 }

@@ -28,7 +28,7 @@ public class EventControllerTests {
     ObjectMapper objectMapper;
 
     @Test
-    @DisplayName("202 return")
+    @DisplayName("정상적으로 이벤트를 생성하는 테스트")
     void createEvent_201() throws Exception {
         EventDto event = EventDto.builder()
                 .name("Spring")
@@ -59,7 +59,7 @@ public class EventControllerTests {
     }
 
     @Test
-    @DisplayName("bad request")
+    @DisplayName("입력 받을 수 없는 값을 사용한 경우에 에러가 발생하는 테스트")
     void createEvent_badRequest() throws Exception {
         Event event = Event.builder()
                 .id(100)
@@ -88,7 +88,7 @@ public class EventControllerTests {
     }
 
     @Test
-    @DisplayName("bad request by empty input")
+    @DisplayName("입력 값이 비어있는 경우에 에러가 발생하는 테스트")
     public void createEvent_Bad_Request_By_Empty_input() throws Exception {
         EventDto eventDto = EventDto.builder().build();
 
@@ -101,7 +101,7 @@ public class EventControllerTests {
     }
 
     @Test
-    @DisplayName("bad request by wrong input")
+    @DisplayName("입력 값이 잘못된 경우에 에러가 발생하는 테스트")
     public void createEvent_Bad_Request_By_Wrong_input() throws Exception {
         EventDto eventDto = EventDto.builder()
                 .name("Spring")

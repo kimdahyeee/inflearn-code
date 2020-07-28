@@ -1,6 +1,7 @@
 package dev.inflearn.restapi.events;
 
 import lombok.*;
+import org.springframework.hateoas.RepresentationModel;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -10,9 +11,9 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode(of = "id")
+@EqualsAndHashCode(of = "id", callSuper = false)
 @Entity
-public class Event {
+public class Event extends RepresentationModel<Event> {
     @Id
     @GeneratedValue
     private Integer id;

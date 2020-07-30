@@ -2,30 +2,50 @@ package dev.inflearn.restapi.events;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.restdocs.RestDocumentationContextProvider;
+import org.springframework.restdocs.RestDocumentationExtension;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
 import java.time.LocalDateTime;
 
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
 @AutoConfigureMockMvc
+@ExtendWith({RestDocumentationExtension.class})
 public class EventControllerTests {
     @Autowired
     private MockMvc mockMvc;
 
     @Autowired
     ObjectMapper objectMapper;
+
+    @BeforeEach
+    public void setup(WebApplicationContext webApplicationContext,
+                      RestDocumentationContextProvider restDocumentationContextProvider) {
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
+                .apply(documentationConfiguration(restDocumentationContextProvider).operationPreprocessors()
+                        .withRequestDefaults(prettyPrint())
+                        .withResponseDefaults(prettyPrint()))
+                .build();
+    }
 
     @Test
     @DisplayName("정상적으로 이벤트를 생성하는 테스트")
@@ -59,6 +79,7 @@ public class EventControllerTests {
                 .andExpect(jsonPath("_links.self").exists())
                 .andExpect(jsonPath("_links.query-events").exists())
                 .andExpect(jsonPath("_links.update-event").exists())
+                .andDo(document("create-event"))
         ;
     }
 
